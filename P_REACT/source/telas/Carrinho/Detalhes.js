@@ -18,11 +18,12 @@ export default function Detalhes(){
 
 const styles = StyleSheet.create ({
     detalhes:{
-        color:"#ffa500",
+        color:"black",
         fontWeight:"bold",
         fontSize: 25,
         lineHeight: 35,
         textAlign:"center",
+        fontFamily:"Montserrat_700Bold",
     },
     titulo:{
         color:"#ffa500",
