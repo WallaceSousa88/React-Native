@@ -1,25 +1,22 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native" ;
-import logoVendedor from '../../../assets/assets/logo.png';
+import { Image, Text, StyleSheet, View } from "react-native" ;
 import Texto from "../../components/Texto";
 
-export default function Detalhes(){
+export default function Detalhes({titulo, tituloProduto, descricao, nomeVendedor, logoVendedor, preco}){
     return <>
-    <Texto style={styles.detalhes}>Detalhes do carrinho</Texto>
-    <Texto style={styles.titulo}>Kit IoT</Texto>
+    <Texto style={styles.detalhes}>{titulo}}</Texto>
+    <Texto style={styles.titulo}>{tituloProduto}</Texto>
     <View style={styles.vendedor}>
-    <Image style={styles.logoVendedor} source={logoVendedor}/>
-    <Texto style={styles.nomeVendedor}>Nuvem's Cloud Shopping</Texto>
+        <Image style={styles.logoVendedor} source={logoVendedor}/>
+        <Texto style={styles.nomeVendedor}>{nomeVendedor}</Texto>
     </View>
-    <Texto style={styles.desc}>Um kit IoT que revoluciona a vida dos estudantes</Texto>
-    <Texto style={styles.preco}>R$ 99,00</Texto>
+    <Texto style={styles.desc}>{descricao}</Texto>
+    <Texto style={styles.preco}>{preco}</Texto>
     </>
-    ;
 }
 
 const styles = StyleSheet.create ({
     detalhes:{
-        color:"black",
         fontWeight:"bold",
         fontSize: 25,
         lineHeight: 35,
@@ -37,7 +34,7 @@ const styles = StyleSheet.create ({
         fontSize: 18,
         lineHeight: 26,
         marginLeft: 10,
-      },
+    },
     desc:{
         fontSize: 16,
         paddingVertical: 10,
@@ -56,5 +53,5 @@ const styles = StyleSheet.create ({
     vendedor:{
         flexDirection:"row",
         padding: 10,
-    }
+    },
 })
